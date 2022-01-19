@@ -4,13 +4,13 @@ ENV DIRECTORY="/app"
 
 COPY compressor.sh /
 
+RUN apt update && \
+    apt install minify
+
 RUN mkdir -p ${DIRECTORY} && \
     adduser --system --group minify && \
     chown -R minify:minify ${DIRECTORY} && \
     chmod +x compressor.sh
-
-RUN apt update && \
-    apt install minify
 
 WORKDIR /app
 
