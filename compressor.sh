@@ -6,7 +6,7 @@
 
 MINIFY="/usr/bin/minify"
 
-if [ ! -x $MINIFY ]; then
+if [ ! -x $MINIFY ] ; then
   echo "$MINIFY: is not installed. Aborting."
   exit 2
 fi
